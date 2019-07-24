@@ -1,8 +1,10 @@
-import smtplib, ssl
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.multipart import MIMEBase
+import smtplib
+import ssl
 from email import encoders
+from email.mime.multipart import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import time
 
 # Gmail login
 
@@ -25,7 +27,7 @@ if receiverInput == "1":
     receiver_email = "mluviitester@gmail.com"
 elif receiverInput == "2": receiver_email = 'dvoufaktor@gmail.com'
 elif receiverInput == "3": receiver_email = 'stastnysvejk@gmail.com'
-else: receiver_email = input('Enter custom mail adress: ')
+else: receiver_email = input('Enter custom mail address: ')
 print('Receiver is: ' + receiver_email)
 
 
@@ -54,8 +56,6 @@ context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
     server.login(sender_email, password)
     while x <= amount:
-
-
 
         message = MIMEMultipart("alternative")
         message["Subject"] = subj + " " + str(x)
