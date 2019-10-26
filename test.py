@@ -8,25 +8,25 @@ import time
 
 # Gmail login
 
-sender_email = "wallemluvii@gmail.com"
-password = "Mluvii123"
+sender_email = "yourGmailAccount@gmail.com"
+password = "yourPassword"
 
 
 # Choose receiver
 
 print("\nContacts: "
-      "\n 1 - mluviitester@gmail.com"
-      "\n 2 - dvoufaktor@gmail.com "
-      "\n 3 - stastnysvejk@gmail.com "
+      "\n 1 - optionalRecipient1@gmail.com"
+      "\n 2 - optionalRecipient2@gmail.com "
+      "\n 3 - optionalRecipient3@gmail.com "
       "\n 4 - CUSTOM in next step"
       )
 
 receiverInput = input("Enter account number: ")
 
 if receiverInput == "1":
-    receiver_email = "mluviitester@gmail.com"
-elif receiverInput == "2": receiver_email = 'dvoufaktor@gmail.com'
-elif receiverInput == "3": receiver_email = 'stastnysvejk@gmail.com'
+    receiver_email = "optionalRecipient1@gmail.com"
+elif receiverInput == "2": receiver_email = 'optionalRecipient2@gmail.com'
+elif receiverInput == "3": receiver_email = 'optionalRecipient2@gmail.com'
 else: receiver_email = input('Enter custom mail address: ')
 print('Receiver is: ' + receiver_email)
 
